@@ -1,0 +1,18 @@
+[
+	{
+		"id":100,
+		"text":"item 1",
+		"children":[
+			{"id":201,"text":"sub item 1","parent":100},
+			{"id":3,"text":"sub item 1","parent":100}
+		]
+	},
+	{
+		"id":40,
+		"text":"item 2",
+		"children":[
+			{"id":50,"text":"sub item 2","parent":40},
+			{"id":60,"text":"sub item 2","parent":40}
+		]
+	}
+]

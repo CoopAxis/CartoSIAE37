@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<title>Carto SIAE 37</title>
+
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge;chrome=1" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta http-equiv="Content-Language" content="fr" />
+
+		<meta name="description" content="Cartographie des structures d'insertion par l'activité économque d'Indre-et-Loire" />
+		<meta name="author" content="CoopAxis, Cyrille Giquello, ..." />
+		<link rel="shortcut icon" href="img/favicon.ico" />
+
+		<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css" media="screen" />
+		<link rel="stylesheet" href="vendor/jquery.splitter/jquery.splitter.css" media="screen" />
+		<link rel="stylesheet" href="vendor/leaflet/leaflet.css" media="screen" />
+		<link rel="stylesheet" href="vendor/jstree/themes/default/style.min.css" media="screen" />
+		<link rel="stylesheet" href="cartoSiae.css" media="screen" />
+
+	</head>
+	<body>
+
+	<!-- IHM -->
+
+	<header class="navbar navbar-inverse">
+		<div class="navbar-header">
+			<a class="navbar-brand" href="#">Cartographie SIAE</a>
+		</div>
+	</header>
+	<div class="container-fluid">
+		<div class="row" id="splitterPane">
+			<div>
+				Recherche: <input type="text" id="siaeTreeSearch" /> <button id="siaeSearchClear">effacer</button>
+				<div>
+				Sélection:	<button id="siaeTreeSelectAll">tous</button>
+					<button id="siaeTreeSelectNone">aucun</button>
+				</div>
+				<div id="siaeTree">
+					<ul>
+						<li>item 1</li>
+						<li>item 2</li>
+					</ul>
+				</div>
+			</div>
+			<div id="siaeMap">Here is the Leaflet map</div>
+		</div>
+	</div>
+
+	<!-- TEMPLATES -->
+
+	<div id="siaePopupTemplate" style="display: none">
+		<p class="text-success siae_title">siae_title</p>
+		<dl class="">
+			<dt>Adresse: <span class="siae_address">siae_address</span></dt>
+			<dt>Tél: <span class="siae_phone">siae_tel</span></dt>
+			<dt>Mail: <span class="siae_mail">siae_tel</span></dt>
+		</dl>
+		<ul class="siae_metiers">
+		</ul>
+		<br/>
+	</div>
+
+	<script src="vendor/jquery.min.js" type="text/javascript"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+
+	<script src="vendor/jquery.splitter/jquery.splitter-0.16.0.js" type="text/javascript"></script>
+	
+	<script src="vendor/leaflet/leaflet.js" type="text/javascript"></script>
+	<script src="vendor/leaflet.oms.min.js" type="text/javascript"></script>
+	<script src="vendor/jstree/jstree.min.js" type="text/javascript"></script>
+	<script src="lib/CartoSIAE.js" type="text/javascript"></script>
+	<script src="lib/SiaeMap.js" type="text/javascript"></script>
+	<script src="lib/SiaeTree.js" type="text/javascript"></script>
+
+	<script type="text/javascript">
+
+	var cartoSiae ;
+	$(function(){
+
+		// TODO automatic (re)sizing of elements
+		var height = 560 ;
+
+		$('#splitterPane').width( $(window).width() ).height( height ).split({
+		    orientation: 'vertical',
+		    limit: 1
+		});
+		$('#siaeMap').height( height );
+
+		cartoSiae = new CartoSIAE({
+			dataUrl: 'data/siae.json',
+			mapId: 'siaeMap',
+			mapPopupTemplateId: 'siaePopupTemplate',
+			treeId: 'siaeTree',
+			//treeDataUrl: 'data/siae-mock.json',
+			//treeDataUrl: 'data/jstreedata-error01.json',
+			treeDataUrl: 'data/siae-romes.json',
+			//treeDataUrl: 'data/Codes_ROME-tree.xls.json',
+			treeSearchId: 'siaeTreeSearch',
+			treeSearchClear: 'siaeSearchClear',
+			treeSelectAllId: 'siaeTreeSelectAll',
+			treeSelectNoneId: 'siaeTreeSelectNone',
+		});
+
+		$(window).on('resize', function() {
+		    $('#splitterPane').width( $(window).width() );		    
+		})/* ? .trigger('resize') ? */;
+
+	});
+
+	</script>
+	</body>
+</html>

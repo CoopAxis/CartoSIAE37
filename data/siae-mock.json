@@ -1,0 +1,137 @@
+[
+
+{	"id": 1, "parent": "#",
+	"text": "Agriculture et pêche, espaces naturels et espaces verts, soins aux animaux"
+},
+	{	"id": 2, "parent": 1,
+		"text": "Engins agricoles et forestiers"
+	},
+		{	"id": 3, "parent": 2,
+			"text": "Conduite d'engins d'exploitation agricole et forestière"
+		},
+	{	"id": 4, "parent": 1,
+		"text": "Espaces naturels et espaces verts"
+	},
+		{	"id": 5, "parent": 4,
+			"text": "Bûcheronnage et élagage"
+		},
+		{	"id": 6, "parent": 4,
+			"text": "Entretien des espaces naturels"
+		},
+		{	"id": 7, "parent": 4,
+			"text": "Entretien des espaces verts"
+		},
+	{	"id": 8, "parent": 1,
+		"text": "Production"
+	},
+		{	"id": 10, "parent": 8,
+			"text": "Aide agricole de production fruitière ou viticole"
+		},
+		{	"id": 11, "parent": 8,
+			"text": "Aide agricole de production légumière ou végétale"
+		},
+		{	"id": 12, "parent": 8,
+			"text": "Arboriculture et viticulture"
+		},
+		{	"id": 13, "parent": 8,
+			"text": "Élevage de lapins et volailles"
+		},
+		{	"id": 14, "parent": 8,
+			"text": "Horticulture et maraîchage"
+		},
+		{	"id": 15, "parent": 8,
+			"text": "Polyculture, élevage"
+		},
+
+{	"id": 16, "parent": "#",
+	"text": "Art et façonnage d'ouvrages d'art"
+},
+	{	"id": 17, "parent": 16,
+		"text": "Métal, verre, bijouterie et horlogerie"
+	},
+		{	"id": 18, "parent": 17,
+			"text": "Métallerie d'art"
+		},
+
+{	"id": 19, "parent": "#",
+	"text": "Commerce, vente et grande distribution"
+},
+	{	"id": 20, "parent": 19,
+		"text": "Commerce alimentaire et métiers de bouche"
+	},
+		{	"id": 21, "parent": 20,
+			"text": "Vente en alimentation"
+		},
+	{	"id": 22, "parent": 19,
+		"text": "Commerce non alimentaire et de prestation de confort"
+	},
+		{	"id": 23, "parent": 22,
+			"text": "Coiffure"
+		},
+		{	"id": 24, "parent": 22,
+			"text": "Retouches en habillement"
+		},
+		{	"id": 25, "parent": 22,
+			"text": "Vente de végétaux"
+		},
+		{	"id": 26, "parent": 22,
+			"text": "Vente en décoration et équipement du foyer"
+		},
+		{	"id": 27, "parent": 22,
+			"text": "Vente en habillement et accessoires de la personne"
+		},
+
+{	"id": 28, "parent": "#",
+	"text": "Communication, média et multimédia"
+},
+	{	"id": 29, "parent": 28,
+		"text": "Édition et communication"
+	},
+		{	"id": 30, "parent": 29,
+			"text": "Animation de site multimédia"
+		},
+		{	"id": 31, "parent": 29,
+			"text": "Communication"
+		},
+	{	"id": 32, "parent": 28,
+		"text": "Images et sons"
+	},
+		{	"id": 33, "parent": 32,
+			"text": "Photographie"
+		},
+	{	"id": 34, "parent": 28,
+		"text": "Industries graphiques"
+	},
+		{	"id": 35, "parent": 34,
+			"text": "Façonnage et routage"
+		},
+
+{	"id": 36, "parent": "#",
+	"text": "Construction, bâtiment et travaux publics"
+},
+	{	"id": 37, "parent": 36,
+		"text": "Conception et études"
+	},
+		{	"id": 38, "parent": 37,
+			"text": "Assistante décoratrice d'intérieur"
+		},
+	{	"id": 39, "parent": 36,
+		"text": "Conduite et encadrement de chantier - travaux"
+	},
+		{	"id": 40, "parent": 39,
+			"text": "Conduite de travaux du BTP"
+		},
+	{	"id": 41, "parent": 36,
+		"text": "Engins de chantier"
+	},
+		{	"id": 42, "parent": 41,
+			"text": "Conduite d'engins de terrassement et de carrière "
+		},
+	{	"id": 43, "parent": 36,
+		"text": "Montage de structures"
+	},
+		{	"id": 44, "parent": 43,
+			"text": "Montage de structures et charpente bois"
+		}
+
+]
