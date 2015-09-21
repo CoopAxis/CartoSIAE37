@@ -29,7 +29,7 @@
 			<a class="navbar-brand" href="#">Cartographie SIAE</a>
 		</div>
 	</header>
-	<div class="container-fluid">
+	<div id="container" class="container-fluid">
 		<div class="row" id="splitterPane">
 			<div>
 				Recherche: <input type="text" id="siaeTreeSearch" /> <button id="siaeSearchClear">effacer</button>
@@ -44,7 +44,9 @@
 					</ul>
 				</div>
 			</div>
-			<div id="siaeMap">Here is the Leaflet map</div>
+			<div>
+				<div id="siaeMap">Here is the Leaflet map</div>
+			</div>
 		</div>
 	</div>
 
@@ -80,7 +82,8 @@
 	$(function(){
 
 		// TODO automatic (re)sizing of elements
-		var height = 560 ;
+		var topOffset = $('#container').position().top ;
+		var height = $(window).height() - topOffset - 5 ;
 
 		$('#splitterPane').width( $(window).width() ).height( height ).split({
 		    orientation: 'vertical',
