@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
     <title>Carto SIAE37 par Coopaxis</title>
-    <meta name="description" content="Cartographie des structures d'insertion par l'activité économque d'Indre-et-Loire" />
-    <meta name="author" content="CoopAxis, Cyrille Giquello, Gildas Noel..." />
+    <meta name="description" content="Cartographie des structures d'insertion par l'activité économique d'Indre-et-Loire (37)" />
+    <meta name="author" content="CoopAxis, Cyrille Giquello - Artefacts, Gildas Noël - Ackwa..." />
 
     <!-- @see https://github.com/jumpinjackie/bootstrap-viewer-template -->
     <link rel="stylesheet" href="./assets/css/ol.css" />
@@ -15,8 +15,7 @@
     <link rel="stylesheet" href="./vendor/font-awesome/css/font-awesome.min.css" />
 
     <link rel="stylesheet" href="./vendor/leaflet/leaflet.css" media="screen" />
-    <!-- <link rel="stylesheet" href="vendor/jstree/themes/default/style.min.css" media="screen" /> -->
-    <link rel="stylesheet" href="vendor/jstree/themes/proton/style.css" media="screen" />
+    <link rel="stylesheet" href="./vendor/jstree/themes/proton/style.css" media="screen" />
     <link rel="stylesheet" href="./assets/css/ui.css" />
 
   </head>
@@ -46,7 +45,7 @@
               <!-- <button type="submit" class="btn btn-default">Rechercher...</button> -->
             </form>
             <ul class="nav navbar-nav navbar-right">
-              <li><a href="#">Crédits</a></li>
+              <li><a href="#" data-toggle="modal" data-target="#Credits">Crédits</a></li>
             </ul>
             </div>
             <!-- </div> -->
@@ -87,7 +86,7 @@
       </div>
     </div>
 
-    <!-- Popup template -->
+    <!-- Map Popup template -->
     <div id="siaePopupTemplate" style="display: none">
       <p class="text-success siae_title">siae_title</p>
       <dl class="">
@@ -98,6 +97,25 @@
       <ul class="siae_metiers">
       </ul>
       <br/>
+    </div>
+
+    <!-- Credits Modal -->
+    <div class="modal fade" id="Credits" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">Réalisation Coopaxis pour SIAE 37</h4>
+          </div>
+          <div class="modal-body">
+          <p>Code v0.1 par :</p>
+          <ul>
+            <li>Cyrille GIQUELLO - <a href="http://artefacts.coop" target="_blank">Artefacts</a></li>
+            <li>Gildas NOËL - <a href="http://www.ackwa.fr" target="_blank">Ackwa</a></li>
+          </ul>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- JS UI -->
