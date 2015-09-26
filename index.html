@@ -40,9 +40,10 @@
             <!-- Search -->
             <form class="navbar-form navbar-left" role="search">
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Rechercher..." id="siaeTreeSearch">
-              </div>
-              <!-- <button type="submit" class="btn btn-default">Rechercher...</button> -->
+                <input type="text" class="form-control" placeholder="Compétences..." id="siaeTreeSearch">
+              <button type="button" class="btn btn-primary btn-sm" id="siaeTreeSelectAll">Toutes</button>
+              <button type="button" class="btn btn-primary btn-sm" id="siaeTreeSelectNone">Aucunes</button>
+            </div>
             </form>
             <ul class="nav navbar-nav navbar-right">
               <li><a href="#" data-toggle="modal" data-target="#Credits">Crédits</a></li>
@@ -143,7 +144,6 @@
         var height = $(window).height() - topOffset - 5 ;
 
         $('#siaeMap').height(height);
-        //$('#control').css({'max-height': height + 'px' });
 
         cartoSiae = new CartoSIAE({
           dataUrl: 'data/siae.json',
