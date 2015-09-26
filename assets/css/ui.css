@@ -69,3 +69,7 @@ body {
   font-style: normal;
   color: #000;
 }
+
+ul.siae_metiers {
+  padding-left: 14px;
+}
