@@ -10,7 +10,6 @@
     <meta name="author" content="CoopAxis, Cyrille Giquello - Artefacts, Gildas Noël - Ackwa..." />
 
     <!-- @see https://github.com/jumpinjackie/bootstrap-viewer-template -->
-    <link rel="stylesheet" href="./assets/css/ol.css" />
     <link rel="stylesheet" href="./vendor/bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" href="./vendor/font-awesome/css/font-awesome.min.css" />
 
@@ -144,7 +143,8 @@
         var height = $(window).height() - topOffset - 5 ;
 
         $('#siaeMap').height(height);
-
+      
+        // Initialize map & tree
         cartoSiae = new CartoSIAE({
           dataUrl: 'data/siae.json',
 
@@ -159,6 +159,10 @@
 
           treeSelectAllId: 'siaeTreeSelectAll',
           treeSelectNoneId: 'siaeTreeSelectNone',
+        });
+
+        $('#siaeTreeSearch').keypress(function() {
+          console.log('Here');
         });
       });
     </script>
