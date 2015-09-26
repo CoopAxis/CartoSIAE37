@@ -62,11 +62,17 @@ body {
 #control .panel-body{
   padding:5px;  
   font-size:80%;
-  overflow-x : hidden;
+  overflow-x:hidden;
+  overflow-y:scroll;
 }
 
+.siae_contact {
+  margin-bottom: 10px;
+}
 ul.siae_metiers {
   padding-left: 14px;
+  max-height: 150px;
+  overflow-y:scroll;
 }
 
 .jstree-proton .jstree-search {
@@ -80,4 +86,14 @@ ul.siae_metiers {
   font-weight: bold;
   box-shadow: none;
   border-radius: 0;
+}
+
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 7px;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(0,0,0,.5);
+    -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
 }
