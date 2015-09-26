@@ -65,11 +65,19 @@ body {
   overflow-x : hidden;
 }
 
+ul.siae_metiers {
+  padding-left: 14px;
+}
+
 .jstree-proton .jstree-search {
   font-style: normal;
   color: #000;
 }
 
-ul.siae_metiers {
-  padding-left: 14px;
+.jstree-proton .jstree-clicked {
+  background: none;
+  color:#2975b6;
+  font-weight: bold;
+  box-shadow: none;
+  border-radius: 0;
 }
