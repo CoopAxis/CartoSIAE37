@@ -161,7 +161,11 @@
         });
 
         $('#siaeTreeSearch').keypress(function() {
-          console.log('Here');
+          var oControl = $('.sidebar-left .sidebar-body');
+          if (!oControl.is(":visible")) {
+            oControl.toggle('slide');
+            $('.mini-submenu-left').hide();
+          }
         });
       });
     </script>
