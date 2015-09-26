@@ -138,13 +138,6 @@
     <script type="text/javascript">
       var cartoSiae ;
       $(function(){
-
-        // TODO automatic (re)sizing of elements
-        var topOffset = $('#container').position().top ;
-        var height = $(window).height() - topOffset - 5 ;
-
-        $('#siaeMap').height(height);
-      
         // Initialize map & tree
         cartoSiae = new CartoSIAE({
           dataUrl: 'data/siae.json',
@@ -168,8 +161,17 @@
             oControl.toggle('slide');
             $('.mini-submenu-left').hide();
           }
+          $(window).on("resize", function() {
+            mapResize();
+          });
+
         });
       });
+      function mapResize() {
+        var topOffset = $('#container').position().top ;
+        var height = $(window).height() - topOffset - 5 ;
+        $('#siaeMap').height(height);
+      }
     </script>
   </body>
 </html>
