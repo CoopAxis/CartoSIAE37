@@ -1,19 +1,30 @@
-body { overflow: hidden; }
+body {
+  overflow: hidden;
+}
 
-.navbar-offset { margin-top: 50px; }
-#siaeMap { position: absolute; top: 50px; bottom: 0px; left: 0px; right: 0px; }
-#siaeMap .ol-zoom { font-size: 1.2em; }
+.navbar-offset {
+  margin-top: 50px;
+}
+#siaeMap {
+  position: absolute; top: 50px; bottom: 0px; left: 0px; right: 0px;
+}
+#siaeMap .ol-zoom {
+  font-size: 1.2em;
+}
 
-.zoom-top-opened-sidebar { margin-top: 5px; }
-.zoom-top-collapsed { margin-top: 45px; }
+.zoom-top-opened-sidebar {
+  margin-top: 5px;
+}
+.zoom-top-collapsed {
+  margin-top: 45px;
+}
 
-.mini-submenu{
+.mini-submenu {
   display:none;  
   background-color: rgba(255, 255, 255, 0.46);
   border: 1px solid rgba(0, 0, 0, 0.9);
   border-radius: 4px;
   padding: 9px;  
-  /*position: relative;*/
   width: 42px;
   text-align: center;
 }
@@ -25,31 +36,64 @@ body { overflow: hidden; }
   z-index: 40;
 }
 
-#siaeMap { z-index: 35; }
+#siaeMap {
+  z-index: 35;
+}
 
-.sidebar { z-index: 45; }
+.sidebar {
+  z-index: 45;
+}
 
-.main-row { position: relative; top: 5px; left: 5px;}
+.main-row {
+  position: relative; top: 3px; left: 3px;
+}
 
-.mini-submenu:hover{
+.mini-submenu:hover {
   cursor: pointer;
 }
 
-.slide-submenu{
-  background: rgba(0, 0, 0, 0.45);
+.slide-submenu {
   display: inline-block;
   padding: 0 8px;
-  border-radius: 4px;
   cursor: pointer;
+  font-size: 120%;
 }
 
-#control .panel-body{
+#control .panel-body {
   padding:5px;  
   font-size:80%;
-  overflow-x : hidden;
+  overflow-x:hidden;
+  overflow-y:scroll;
+}
+
+.siae_contact {
+  margin-bottom: 10px;
+}
+ul.siae_metiers {
+  padding-left: 14px;
+  max-height: 150px;
+  overflow-y:scroll;
 }
 
 .jstree-proton .jstree-search {
   font-style: normal;
   color: #000;
+}
+
+.jstree-proton .jstree-clicked {
+  background: none;
+  color:#2975b6;
+  font-weight: bold;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 7px;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(0,0,0,.5);
+    -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
 }
