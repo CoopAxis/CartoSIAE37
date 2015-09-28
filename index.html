@@ -167,7 +167,9 @@
           mapResize();
         });
       });
+
       function mapResize() {
+    	// TODO: (cd. #11) not the right way ! Can Leaflet compute position/size it self ?
         var topOffset = $('#container').position().top ;
         var height = $(window).height() - topOffset - 50 ;
         $('#siaeMap').height(height);
