@@ -91,7 +91,6 @@ function extractSiaeAndRomes( $sheet )
 		if( ! isset($siaeNomIndex[$nom]) )
 		{
 			echo $rowIdx, ' ', $nom, "\n";
-			$siaeNomIndex[ $nom ] = count($siae) ;
 
 			$latlon = $sheet->getCellByColumnAndRow( $config['cols']['LatLon'], $rowIdx )->getValue() ;
 			if( ! empty($latlon))
@@ -102,8 +101,11 @@ function extractSiaeAndRomes( $sheet )
 					1.0 * trim($latlon2[1])
 				);
 			}
-			$siae[ count($siae) ] = array(
-				'id' => count($siae)+1,
+
+			$siaeIdx = count($siae);
+			$siaeNomIndex[ $nom ] = $siaeIdx ;
+			$siae[ $siaeIdx ] = array(
+				'id' => $siaeIdx + 1 ,
 				'name' => $nom ,
 				'address'=>$sheet->getCellByColumnAndRow( $config['cols']['adress'], $rowIdx )->getValue(),
 				'latlon'=>$latlon,
@@ -128,8 +130,9 @@ function extractSiaeAndRomes( $sheet )
 		if( ! isset($siaeRomesIndex[$rome]))
 			$siaeRomesIndex[$rome] = array();
 		// fill $siaeNomIndex
-		if( ! in_array($siaeNomIndex[ $nom ], $siaeRomesIndex[$rome]) )
-			$siaeRomesIndex[$rome][] =  $siae[ $siaeNomIndex[ $nom ] ]['id'] ;
+		$siaeId = $siae[ $siaeNomIndex[ $nom ] ]['id'];
+		if( ! in_array( $siaeId, $siaeRomesIndex[$rome] ) )
+			$siaeRomesIndex[$rome][] = $siaeId ;
 
 		addRome( $siaeRomesTree, $rome );
 
