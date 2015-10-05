@@ -97,3 +97,27 @@ ul.siae_metiers {
     background-color: rgba(0,0,0,.5);
     -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
 }
+
+/* Leaflet.markercluster */
+
+.marker-cluster-small {
+	background-color: rgba(224, 100, 224, 0.6);
+}
+
+.marker-cluster-small div {
+	background-color: rgba(224, 100, 224, 0.6);
+	}
+
+.marker-cluster-medium {
+	background-color: rgba(240, 194, 12, 0.6);
+	}
+.marker-cluster-medium div {
+	background-color: rgba(240, 194, 12, 0.6);
+	}
+
+.marker-cluster-large {
+	background-color: rgba(241, 128, 23, 0.6);
+	}
+.marker-cluster-large div {
+	background-color: rgba(241, 128, 23, 0.6);
+	}
